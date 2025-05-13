@@ -71,6 +71,7 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
     .two-col { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
     .two-col .image, .two-col .text { flex: 1 1 300px; }
+    .two-col .image img { width: 100%; height: auto; display: block; border-radius: 6px; }
     .section-bg { background: var(--light); }
 
     .cards { display: flex; flex-wrap: wrap; gap: 20px; }
@@ -94,7 +95,20 @@
       }
       .hero h1 { font-size: 2rem; }
       .hero p { font-size: 0.9rem; }
-      .two-col { flex-direction: column; }
+      .two-col {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .two-col .image, .two-col .text {
+        flex: 1 1 100%;
+      }
+      .two-col .image {
+        order: 1;
+        margin-bottom: 20px;
+      }
+      .two-col .text {
+        order: 2;
+      }
       .card { flex: 1 1 100%; }
     }
 
